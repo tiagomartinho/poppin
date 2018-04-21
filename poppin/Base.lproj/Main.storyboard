@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,9 +20,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfY-qW-FFJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKI-7Y-5Jb">
-                                <rect key="frame" x="172" y="617" width="30" height="30"/>
-                                <state key="normal" title="Add"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKI-7Y-5Jb">
+                                <rect key="frame" x="152.5" y="577" width="70" height="70"/>
+                                <state key="normal" image="add pop"/>
                                 <connections>
                                     <segue destination="amf-eM-kug" kind="presentation" id="ol0-1k-j9L"/>
                                 </connections>
@@ -59,9 +58,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3If-Xl-y7T">
-                                <rect key="frame" x="163" y="617" width="49" height="30"/>
-                                <state key="normal" title="Record"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3If-Xl-y7T">
+                                <rect key="frame" x="152" y="575" width="72" height="72"/>
+                                <state key="normal" image="playvideo"/>
                                 <connections>
                                     <action selector="recordTapped:" destination="amf-eM-kug" eventType="touchUpInside" id="lcE-gE-cmG"/>
                                 </connections>
@@ -83,4 +82,8 @@
             <point key="canvasLocation" x="1919" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add pop" width="70" height="70"/>
+        <image name="playvideo" width="72" height="72"/>
+    </resources>
 </document>

@@ -18,7 +18,7 @@ class RecordVC: UIViewController {
 
     @IBAction func recordTapped(_ sender: Any) {
         recorder.record()
-        recordButton.isHidden = true
+        recordButton.setImage(#imageLiteral(resourceName: "stop video"), for: .normal)
     }
 }
 
@@ -33,5 +33,7 @@ extension RecordVC: SCRecorderDelegate {
         view.layer.addSublayer(playerLayer)
         player.loopEnabled = true
         player.play()
+        recordButton.isHidden = false
+        recordButton.setTitle("Upload", for: .normal)
     }
 }
