@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Etq-HW-66A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="55R-Le-YFG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="152.5" y="577" width="70" height="70"/>
                                 <state key="normal" image="add pop"/>
                                 <connections>
-                                    <segue destination="amf-eM-kug" kind="presentation" id="ol0-1k-j9L"/>
+                                    <segue destination="amf-eM-kug" kind="show" id="3lB-Fi-xIZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2015.2" y="133.5832083958021"/>
         </scene>
         <!--RecordVC-->
         <scene sceneID="VTp-TP-J9v">
@@ -76,7 +76,7 @@
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="70"/>
                                         <state key="normal" image="upload"/>
                                         <connections>
-                                            <segue destination="Etq-HW-66A" kind="presentation" id="d1P-Rv-qdH"/>
+                                            <segue destination="Etq-HW-66A" kind="show" id="juV-9K-iju"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKP-4s-8CC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2856.8000000000002" y="133.5832083958021"/>
         </scene>
         <!--LoadingVC-->
         <scene sceneID="ro9-KZ-hGe">
@@ -117,9 +117,17 @@
                                     <constraint firstAttribute="width" constant="200" id="lua-dI-D4g"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPLOADING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkU-ES-OOC">
+                                <rect key="frame" x="139.5" y="254" width="95.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="DqB-hc-N1D" firstAttribute="top" secondItem="fkU-ES-OOC" secondAttribute="bottom" constant="8" id="dQm-q9-pwy"/>
+                            <constraint firstItem="fkU-ES-OOC" firstAttribute="centerX" secondItem="cqT-xz-0s5" secondAttribute="centerX" id="hRe-vj-pIk"/>
                             <constraint firstItem="DqB-hc-N1D" firstAttribute="centerX" secondItem="cqT-xz-0s5" secondAttribute="centerX" id="pO4-z1-TJk"/>
                             <constraint firstItem="DqB-hc-N1D" firstAttribute="centerY" secondItem="cqT-xz-0s5" secondAttribute="centerY" id="wsE-zN-sco"/>
                         </constraints>
@@ -131,7 +139,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APA-Ff-BOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="134"/>
+            <point key="canvasLocation" x="3688.8000000000002" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sXb-l2-ZCF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="55R-Le-YFG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MS5-hf-dMe">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QHr-6z-Jep"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWQ-4w-F14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>

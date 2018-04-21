@@ -9,5 +9,8 @@ class LoadingVC: UIViewController {
         super.viewDidLoad()
         indicatorView.type = .lineScale
         indicatorView.startAnimating()
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (_) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
 }
