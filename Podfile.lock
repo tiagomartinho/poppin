@@ -1,0 +1,16 @@
+PODS:
+  - SCRecorder (2.7.0)
+
+DEPENDENCIES:
+  - SCRecorder
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SCRecorder
+
+SPEC CHECKSUMS:
+  SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
+
+PODFILE CHECKSUM: bfd0b031cb73a1566557410156cbb1d62ef91fe7
+
+COCOAPODS: 1.5.0
