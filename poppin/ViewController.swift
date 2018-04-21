@@ -85,8 +85,8 @@ extension ViewController: MKMapViewDelegate {
                 view = dequeuedView
             } else {
                 view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: 0, y: 5)
+//                view.canShowCallout = true
+//                view.calloutOffset = CGPoint(x: 0, y: 5)
                 view.image = UIImage(named: annotation.imageName)
                 view.centerOffset = CGPoint(x: 0, y: -20)
             }
@@ -94,6 +94,12 @@ extension ViewController: MKMapViewDelegate {
             return view
         }
         return nil
+    }
+
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print("did SELECT")
+        let playerVC = storyboard?.instantiateViewController(withIdentifier: "PlayerVC")
+        present(playerVC!, animated: true, completion: nil)
     }
 }
 

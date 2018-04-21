@@ -61,6 +61,38 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="133.5832083958021"/>
         </scene>
+        <!--PlayerVC-->
+        <scene sceneID="40i-aL-SaT">
+            <objects>
+                <viewController storyboardIdentifier="PlayerVC" id="L6a-q2-eUp" customClass="PlayerVC" customModule="poppin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BRc-xR-MYG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8t-5H-obr">
+                                <rect key="frame" x="0.0" y="605" width="375" height="62"/>
+                                <state key="normal" image="TAKE ME THERE"/>
+                                <connections>
+                                    <action selector="fdskjhfsdjkh:" destination="L6a-q2-eUp" eventType="touchUpInside" id="NQT-09-eIg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="n8t-5H-obr" secondAttribute="bottom" id="7qg-L0-wLu"/>
+                            <constraint firstItem="tcm-Tm-ZNV" firstAttribute="trailing" secondItem="n8t-5H-obr" secondAttribute="trailing" id="9YD-iL-wWJ"/>
+                            <constraint firstItem="n8t-5H-obr" firstAttribute="leading" secondItem="tcm-Tm-ZNV" secondAttribute="leading" id="Euq-Ha-rLX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tcm-Tm-ZNV"/>
+                    </view>
+                    <connections>
+                        <outlet property="takeButton" destination="n8t-5H-obr" id="fi3-zT-ezq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gl-ix-moe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034" y="842"/>
+        </scene>
         <!--RecordVC-->
         <scene sceneID="VTp-TP-J9v">
             <objects>
@@ -172,6 +204,7 @@
     </scenes>
     <resources>
         <image name="POPUP2" width="332" height="346"/>
+        <image name="TAKE ME THERE" width="375" height="62"/>
         <image name="add pop" width="70" height="70"/>
         <image name="discard" width="70" height="70"/>
         <image name="playvideo" width="72" height="72"/>
