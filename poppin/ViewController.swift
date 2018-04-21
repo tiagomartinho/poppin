@@ -3,17 +3,19 @@ import CoreLocation
 import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-    
+
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         determineCurrentLocation()
     }
-    
-    func determineCurrentLocation()
-    {
+
+    @IBAction func captureVideo(_ sender: Any) {
+    }
+
+    func determineCurrentLocation() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -23,7 +25,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation()
         }
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0] as CLLocation
         manager.stopUpdatingLocation()
@@ -31,9 +33,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         mapView.setRegion(region, animated: true)
     }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
-    {
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error \(error)")
     }
 }
