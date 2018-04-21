@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02D5AE9C3F936AB39AA150F0 /* Pods_poppin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743DF4B06F21FDCB3D939403 /* Pods_poppin.framework */; };
+		EA981A3B208BB316005C649F /* RecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA981A3A208BB316005C649F /* RecordVC.swift */; };
 		EAED1C79208BAC3700FE3CE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED1C78208BAC3700FE3CE2 /* AppDelegate.swift */; };
 		EAED1C7B208BAC3700FE3CE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED1C7A208BAC3700FE3CE2 /* ViewController.swift */; };
 		EAED1C7E208BAC3700FE3CE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAED1C7C208BAC3700FE3CE2 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 		6EFCF186C4332974BC007BAE /* Pods-poppin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poppin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poppin/Pods-poppin.debug.xcconfig"; sourceTree = "<group>"; };
 		743DF4B06F21FDCB3D939403 /* Pods_poppin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poppin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B27B12A385691051BB20818 /* Pods-poppin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poppin.release.xcconfig"; path = "Pods/Target Support Files/Pods-poppin/Pods-poppin.release.xcconfig"; sourceTree = "<group>"; };
+		EA981A37208BB2C0005C649F /* poppin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poppin-Bridging-Header.h"; sourceTree = "<group>"; };
+		EA981A3A208BB316005C649F /* RecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVC.swift; sourceTree = "<group>"; };
 		EAED1C75208BAC3700FE3CE2 /* poppin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poppin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAED1C78208BAC3700FE3CE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAED1C7A208BAC3700FE3CE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 				EAED1C7F208BAC3900FE3CE2 /* Assets.xcassets */,
 				EAED1C81208BAC3900FE3CE2 /* LaunchScreen.storyboard */,
 				EAED1C84208BAC3900FE3CE2 /* Info.plist */,
+				EA981A37208BB2C0005C649F /* poppin-Bridging-Header.h */,
+				EA981A3A208BB316005C649F /* RecordVC.swift */,
 			);
 			path = poppin;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 				TargetAttributes = {
 					EAED1C74208BAC3700FE3CE2 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -200,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA981A3B208BB316005C649F /* RecordVC.swift in Sources */,
 				EAED1C7B208BAC3700FE3CE2 /* ViewController.swift in Sources */,
 				EAED1C79208BAC3700FE3CE2 /* AppDelegate.swift in Sources */,
 			);
@@ -346,12 +353,19 @@
 			baseConfigurationReference = 6EFCF186C4332974BC007BAE /* Pods-poppin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4C34FT6ABU;
 				INFOPLIST_FILE = poppin/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tm.poppin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "poppin/poppin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,12 +376,18 @@
 			baseConfigurationReference = 7B27B12A385691051BB20818 /* Pods-poppin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4C34FT6ABU;
 				INFOPLIST_FILE = poppin/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tm.poppin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "poppin/poppin-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

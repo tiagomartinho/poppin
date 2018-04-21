@@ -12,9 +12,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         determineCurrentLocation()
     }
 
-    @IBAction func captureVideo(_ sender: Any) {
-    }
-
     func determineCurrentLocation() {
         locationManager = CLLocationManager()
         locationManager.delegate = self
