@@ -21,6 +21,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    var viewDidAppear = 0
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewDidAppear += 1
+        if viewDidAppear == 2 {
+            
+        }
+    }
+
     func determineCurrentLocation() {
         locationManager = CLLocationManager()
         locationManager.delegate = self

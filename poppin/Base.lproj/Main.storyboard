@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfY-qW-FFJ">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfY-qW-FFJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKI-7Y-5Jb">
                                 <rect key="frame" x="152.5" y="577" width="70" height="70"/>
@@ -27,15 +28,25 @@
                                     <segue destination="amf-eM-kug" kind="show" id="3lB-Fi-xIZ"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omC-Ob-eoH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="POPUP2" translatesAutoresizingMaskIntoConstraints="NO" id="uM2-9F-mtg">
+                                <rect key="frame" x="0.0" y="160" width="375" height="346"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xKI-7Y-5Jb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0I4-rM-4UG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bfY-qW-FFJ" secondAttribute="bottom" id="0Nr-V6-OKH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bfY-qW-FFJ" secondAttribute="trailing" id="ElE-qo-mMR"/>
-                            <constraint firstItem="bfY-qW-FFJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fs9-7s-402"/>
-                            <constraint firstItem="bfY-qW-FFJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K1Q-qM-ijX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xKI-7Y-5Jb" secondAttribute="bottom" constant="20" id="YzG-v0-bmf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xKI-7Y-5Jb" secondAttribute="bottom" constant="20" id="HYm-WL-2W8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="omC-Ob-eoH" secondAttribute="trailing" id="Iuo-n6-WCy"/>
+                            <constraint firstItem="omC-Ob-eoH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KtS-qI-PDz"/>
+                            <constraint firstItem="uM2-9F-mtg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="MVh-WS-bJi"/>
+                            <constraint firstItem="uM2-9F-mtg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oz1-rU-ZI7"/>
+                            <constraint firstItem="uM2-9F-mtg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VdM-Bg-1mS"/>
+                            <constraint firstItem="xKI-7Y-5Jb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aLr-PS-hzk"/>
+                            <constraint firstItem="omC-Ob-eoH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fWY-cZ-36X"/>
+                            <constraint firstItem="omC-Ob-eoH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gmd-nt-Jo9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -160,6 +171,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="POPUP2" width="332" height="346"/>
         <image name="add pop" width="70" height="70"/>
         <image name="discard" width="70" height="70"/>
         <image name="playvideo" width="72" height="72"/>

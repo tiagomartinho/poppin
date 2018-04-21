@@ -21,13 +21,19 @@ class RecordVC: UIViewController {
         recorder.record()
         recordButton.setImage(#imageLiteral(resourceName: "stop video"), for: .normal)
     }
+    var player: SCPlayer!
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        player.pause()
+    }
 }
 
 extension RecordVC: SCRecorderDelegate {
 
+
     func recorder(_ recorder: SCRecorder, didComplete session: SCRecordSession) {
         print("did complete")
-        let player = SCPlayer()
+        player = SCPlayer()
         player.setItemBy(session.assetRepresentingSegments())
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = view.bounds
