@@ -65,9 +65,28 @@
                                     <action selector="recordTapped:" destination="amf-eM-kug" eventType="touchUpInside" id="lcE-gE-cmG"/>
                                 </connections>
                             </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-0R-irL">
+                                <rect key="frame" x="0.0" y="577" width="375" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftz-w2-iXP">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="70"/>
+                                        <state key="normal" image="discard"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saa-zz-huj">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="70"/>
+                                        <state key="normal" image="upload"/>
+                                        <connections>
+                                            <segue destination="Etq-HW-66A" kind="presentation" id="d1P-Rv-qdH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3bG-0R-irL" secondAttribute="bottom" constant="20" id="4uh-Be-shK"/>
+                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="trailing" secondItem="3bG-0R-irL" secondAttribute="trailing" id="Wag-8u-FWu"/>
+                            <constraint firstItem="3bG-0R-irL" firstAttribute="leading" secondItem="kcD-Ib-nvn" secondAttribute="leading" id="XQg-a2-3h4"/>
                             <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3If-Xl-y7T" secondAttribute="bottom" constant="20" id="dhQ-fD-EQ1"/>
                             <constraint firstItem="3If-Xl-y7T" firstAttribute="centerX" secondItem="K34-Jb-gGV" secondAttribute="centerX" id="hMo-48-6se"/>
                         </constraints>
@@ -75,15 +94,33 @@
                     </view>
                     <connections>
                         <outlet property="recordButton" destination="3If-Xl-y7T" id="teh-Ig-cub"/>
+                        <outlet property="upload" destination="3bG-0R-irL" id="Usg-jg-5oZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKP-4s-8CC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919" y="134"/>
+            <point key="canvasLocation" x="1917.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ro9-KZ-hGe">
+            <objects>
+                <viewController id="Etq-HW-66A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cqT-xz-0s5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ln2-e1-AQO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APA-Ff-BOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2750" y="134"/>
         </scene>
     </scenes>
     <resources>
         <image name="add pop" width="70" height="70"/>
+        <image name="discard" width="70" height="70"/>
         <image name="playvideo" width="72" height="72"/>
+        <image name="upload" width="70" height="70"/>
     </resources>
 </document>

@@ -4,6 +4,7 @@ class RecordVC: UIViewController {
 
     var recorder: SCRecorder!
 
+    @IBOutlet weak var upload: UIStackView!
     @IBOutlet weak var recordButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,8 @@ extension RecordVC: SCRecorderDelegate {
         view.layer.addSublayer(playerLayer)
         player.loopEnabled = true
         player.play()
-        recordButton.isHidden = false
-        recordButton.setTitle("Upload", for: .normal)
+        upload.isHidden = false
+        view.bringSubview(toFront: upload)
+        recordButton.isHidden = true
     }
 }
