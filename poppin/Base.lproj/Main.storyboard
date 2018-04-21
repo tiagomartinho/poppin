@@ -101,14 +101,28 @@
             </objects>
             <point key="canvasLocation" x="1917.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--LoadingVC-->
         <scene sceneID="ro9-KZ-hGe">
             <objects>
-                <viewController id="Etq-HW-66A" sceneMemberID="viewController">
+                <viewController id="Etq-HW-66A" customClass="LoadingVC" customModule="poppin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqT-xz-0s5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqB-hc-N1D" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4Cq-wd-s94"/>
+                                    <constraint firstAttribute="width" constant="200" id="lua-dI-D4g"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DqB-hc-N1D" firstAttribute="centerX" secondItem="cqT-xz-0s5" secondAttribute="centerX" id="pO4-z1-TJk"/>
+                            <constraint firstItem="DqB-hc-N1D" firstAttribute="centerY" secondItem="cqT-xz-0s5" secondAttribute="centerY" id="wsE-zN-sco"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ln2-e1-AQO"/>
                     </view>
                 </viewController>

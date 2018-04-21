@@ -1,16 +1,22 @@
 PODS:
+  - NVActivityIndicatorView (4.2.0):
+    - NVActivityIndicatorView/Presenter (= 4.2.0)
+  - NVActivityIndicatorView/Presenter (4.2.0)
   - SCRecorder (2.7.0)
 
 DEPENDENCIES:
+  - NVActivityIndicatorView
   - SCRecorder
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - NVActivityIndicatorView
     - SCRecorder
 
 SPEC CHECKSUMS:
+  NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
 
-PODFILE CHECKSUM: bfd0b031cb73a1566557410156cbb1d62ef91fe7
+PODFILE CHECKSUM: fa5db3f1764cb7981d8e7490d8cb903c3afa1aae
 
 COCOAPODS: 1.5.0
