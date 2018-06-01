@@ -109,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3If-Xl-y7T">
-                                <rect key="frame" x="152" y="686" width="72" height="72"/>
+                                <rect key="frame" x="163" y="708" width="50" height="50"/>
                                 <state key="normal" image="playvideo"/>
                                 <connections>
                                     <action selector="recordTapped:" destination="amf-eM-kug" eventType="touchUpInside" id="lcE-gE-cmG"/>
@@ -118,12 +118,8 @@
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-0R-irL">
                                 <rect key="frame" x="0.0" y="688" width="375" height="70"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftz-w2-iXP">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="70"/>
-                                        <state key="normal" image="discard"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saa-zz-huj">
-                                        <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                         <state key="normal" image="upload"/>
                                         <connections>
                                             <segue destination="Etq-HW-66A" kind="show" id="juV-9K-iju"/>
@@ -131,14 +127,20 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftz-w2-iXP">
+                                <rect key="frame" x="8" y="44" width="50" height="50"/>
+                                <state key="normal" image="discard"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3bG-0R-irL" secondAttribute="bottom" constant="20" id="4uh-Be-shK"/>
+                            <constraint firstItem="Ftz-w2-iXP" firstAttribute="leading" secondItem="kcD-Ib-nvn" secondAttribute="leading" constant="8" id="Ijq-tp-g4W"/>
                             <constraint firstItem="kcD-Ib-nvn" firstAttribute="trailing" secondItem="3bG-0R-irL" secondAttribute="trailing" id="Wag-8u-FWu"/>
                             <constraint firstItem="3bG-0R-irL" firstAttribute="leading" secondItem="kcD-Ib-nvn" secondAttribute="leading" id="XQg-a2-3h4"/>
                             <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3If-Xl-y7T" secondAttribute="bottom" constant="20" id="dhQ-fD-EQ1"/>
                             <constraint firstItem="3If-Xl-y7T" firstAttribute="centerX" secondItem="K34-Jb-gGV" secondAttribute="centerX" id="hMo-48-6se"/>
+                            <constraint firstItem="Ftz-w2-iXP" firstAttribute="top" secondItem="kcD-Ib-nvn" secondAttribute="top" id="sc4-85-ryK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kcD-Ib-nvn"/>
                     </view>
@@ -149,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKP-4s-8CC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2856.8000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2856.8000000000002" y="133.00492610837438"/>
         </scene>
         <!--LoadingVC-->
         <scene sceneID="ro9-KZ-hGe">
@@ -212,9 +214,9 @@
     <resources>
         <image name="TAKE ME THERE" width="375" height="62"/>
         <image name="add pop" width="68" height="74"/>
-        <image name="discard" width="70" height="70"/>
+        <image name="discard" width="50" height="50"/>
         <image name="isItPoppin" width="332" height="340"/>
-        <image name="playvideo" width="72" height="72"/>
+        <image name="playvideo" width="50" height="50"/>
         <image name="upload" width="70" height="70"/>
     </resources>
 </document>
