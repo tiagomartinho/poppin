@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKI-7Y-5Jb">
-                                <rect key="frame" x="152.66666666666666" y="688" width="70" height="70"/>
+                                <rect key="frame" x="153.66666666666666" y="684" width="68" height="74"/>
                                 <state key="normal" image="add pop"/>
                                 <connections>
                                     <segue destination="amf-eM-kug" kind="show" id="3lB-Fi-xIZ"/>
@@ -211,7 +211,7 @@
     </scenes>
     <resources>
         <image name="TAKE ME THERE" width="375" height="62"/>
-        <image name="add pop" width="70" height="70"/>
+        <image name="add pop" width="68" height="74"/>
         <image name="discard" width="70" height="70"/>
         <image name="isItPoppin" width="332" height="340"/>
         <image name="playvideo" width="72" height="72"/>
