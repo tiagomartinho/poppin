@@ -20,6 +20,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         for pop in pops {
             mapView?.addAnnotation(pop)
         }
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissPopup))
+        gesture.numberOfTapsRequired = 1
+        view.addGestureRecognizer(gesture)
+    }
+
+    @objc func dismissPopup() {
+        overlay.isHidden = true
+        isItPoppin.isHidden = true
     }
 
     var viewDidAppear = 0
@@ -30,6 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if viewDidAppear == 2 {
             overlay.isHidden = false
             isItPoppin.isHidden = false
+            viewDidAppear = 0
         }
     }
 
