@@ -7,9 +7,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     var locationManager: CLLocationManager!
 
-    let pops:[Pop] = [ Pop(title: "El Dique", imageName: "pop2", coordinate: CLLocationCoordinate2D(latitude:  41.3793779, longitude:       2.1879071)),
-                       Pop(title: "Brunch And Cake", imageName: "pop2", coordinate: CLLocationCoordinate2D(latitude: 41.3811055, longitude: 2.1871944)),
-                       Pop(title: "The Green Spot", imageName: "pop3", coordinate: CLLocationCoordinate2D(latitude: 41.3818466, longitude: 2.1836384))]
+    let pops:[Pop] = [ Pop(title: "El Dique", imageName: "popSmall", coordinate: CLLocationCoordinate2D(latitude:  41.3793779, longitude:       2.1879071)),
+                       Pop(title: "Brunch And Cake", imageName: "popSmall", coordinate: CLLocationCoordinate2D(latitude: 41.3811055, longitude: 2.1871944)),
+                       Pop(title: "The Green Spot", imageName: "popBig", coordinate: CLLocationCoordinate2D(latitude: 41.3818466, longitude: 2.1836384))]
 
     override func viewDidLoad() {
         super.viewDidLoad()
