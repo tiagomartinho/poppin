@@ -128,70 +128,60 @@
                                     <action selector="recordTapped:" destination="amf-eM-kug" eventType="touchUpInside" id="lcE-gE-cmG"/>
                                 </connections>
                             </button>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-0R-irL">
-                                <rect key="frame" x="0.0" y="698" width="375" height="70"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saa-zz-huj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
-                                        <state key="normal" image="upload"/>
-                                        <connections>
-                                            <segue destination="Etq-HW-66A" kind="show" id="juV-9K-iju"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxQ-Vc-c1e">
+                                <rect key="frame" x="323" y="721" width="22" height="22"/>
+                                <state key="normal" image="Flip"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3bG-0R-irL" secondAttribute="bottom" constant="10" id="4uh-Be-shK"/>
                             <constraint firstItem="s9v-PC-lzh" firstAttribute="trailing" secondItem="kcD-Ib-nvn" secondAttribute="trailing" id="Lpp-fM-PRe"/>
                             <constraint firstAttribute="bottom" secondItem="s9v-PC-lzh" secondAttribute="bottom" id="SOf-Di-b1Y"/>
-                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="trailing" secondItem="3bG-0R-irL" secondAttribute="trailing" id="Wag-8u-FWu"/>
-                            <constraint firstItem="3bG-0R-irL" firstAttribute="leading" secondItem="kcD-Ib-nvn" secondAttribute="leading" id="XQg-a2-3h4"/>
+                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="trailing" secondItem="hxQ-Vc-c1e" secondAttribute="trailing" constant="30" id="YKP-PL-M6p"/>
                             <constraint firstItem="s9v-PC-lzh" firstAttribute="leading" secondItem="kcD-Ib-nvn" secondAttribute="leading" id="b7v-Od-Ady"/>
                             <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3If-Xl-y7T" secondAttribute="bottom" constant="10" id="dhQ-fD-EQ1"/>
                             <constraint firstItem="3If-Xl-y7T" firstAttribute="centerX" secondItem="K34-Jb-gGV" secondAttribute="centerX" id="hMo-48-6se"/>
+                            <constraint firstItem="hxQ-Vc-c1e" firstAttribute="centerY" secondItem="3If-Xl-y7T" secondAttribute="centerY" id="j1G-PE-iQN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kcD-Ib-nvn"/>
                     </view>
                     <connections>
+                        <outlet property="flipCamera" destination="hxQ-Vc-c1e" id="ji9-dH-CHG"/>
                         <outlet property="recordButton" destination="3If-Xl-y7T" id="teh-Ig-cub"/>
-                        <outlet property="upload" destination="3bG-0R-irL" id="Usg-jg-5oZ"/>
+                        <outlet property="recordView" destination="s9v-PC-lzh" id="iHO-kW-JaX"/>
+                        <segue destination="Etq-HW-66A" kind="show" identifier="upload" id="GAa-dp-Cge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKP-4s-8CC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2856.8000000000002" y="133.00492610837438"/>
         </scene>
-        <!--LoadingVC-->
+        <!--Uploading-->
         <scene sceneID="ro9-KZ-hGe">
             <objects>
-                <viewController id="Etq-HW-66A" customClass="LoadingVC" customModule="poppin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Uploading" id="Etq-HW-66A" customClass="LoadingVC" customModule="poppin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cqT-xz-0s5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-qE-Xu2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqB-hc-N1D" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
                                 <rect key="frame" x="87" y="356" width="200" height="100"/>
-                                <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="4Cq-wd-s94"/>
                                     <constraint firstAttribute="width" constant="200" id="lua-dI-D4g"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPLOADING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkU-ES-OOC">
-                                <rect key="frame" x="139.66666666666666" y="327" width="95.333333333333343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="DqB-hc-N1D" firstAttribute="top" secondItem="fkU-ES-OOC" secondAttribute="bottom" constant="8" id="dQm-q9-pwy"/>
-                            <constraint firstItem="fkU-ES-OOC" firstAttribute="centerX" secondItem="cqT-xz-0s5" secondAttribute="centerX" id="hRe-vj-pIk"/>
+                            <constraint firstAttribute="bottom" secondItem="tTb-qE-Xu2" secondAttribute="bottom" id="CSc-mz-Bqd"/>
+                            <constraint firstItem="tTb-qE-Xu2" firstAttribute="leading" secondItem="ln2-e1-AQO" secondAttribute="leading" id="Zry-x6-8xB"/>
+                            <constraint firstItem="tTb-qE-Xu2" firstAttribute="top" secondItem="cqT-xz-0s5" secondAttribute="top" id="dOE-q1-eUg"/>
                             <constraint firstItem="DqB-hc-N1D" firstAttribute="centerX" secondItem="cqT-xz-0s5" secondAttribute="centerX" id="pO4-z1-TJk"/>
                             <constraint firstItem="DqB-hc-N1D" firstAttribute="centerY" secondItem="cqT-xz-0s5" secondAttribute="centerY" id="wsE-zN-sco"/>
+                            <constraint firstItem="ln2-e1-AQO" firstAttribute="trailing" secondItem="tTb-qE-Xu2" secondAttribute="trailing" id="xTH-UX-efj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ln2-e1-AQO"/>
                     </view>
@@ -201,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APA-Ff-BOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3688.8000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="3832.8000000000002" y="132.26600985221674"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sXb-l2-ZCF">
@@ -223,11 +213,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Flip" width="22" height="17"/>
+        <image name="Splash" width="1024" height="1024"/>
         <image name="TAKE ME THERE" width="375" height="62"/>
         <image name="addvideo" width="72" height="72"/>
         <image name="isItPoppin" width="332" height="340"/>
         <image name="location" width="72" height="72"/>
         <image name="take video" width="72" height="72"/>
-        <image name="upload" width="70" height="70"/>
     </resources>
 </document>

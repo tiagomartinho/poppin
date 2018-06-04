@@ -4,9 +4,11 @@ class RecordVC: UIViewController {
 
     var recorder: SCRecorder!
 
-    @IBOutlet weak var upload: UIStackView!
+    @IBOutlet weak var flipCamera: UIButton!
+    @IBOutlet weak var recordView: UIView!
     @IBOutlet weak var recordButton: UIButton!
-    override func viewDidLoad() { 
+
+    override func viewDidLoad() {
         super.viewDidLoad()
         recorder = SCRecorder.shared()
         if !recorder.startRunning() {
@@ -23,8 +25,9 @@ class RecordVC: UIViewController {
     }
     var player: SCPlayer!
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    @objc func upload() {
         player.pause()
+        performSegue(withIdentifier: "upload", sender: self)
     }
 }
 
@@ -39,9 +42,11 @@ extension RecordVC: SCRecorderDelegate {
         view.addAndPin(view: buildPlayerView(playerLayer: playerLayer))
         player.loopEnabled = true
         player.play()
-        upload.isHidden = false
-        view.bringSubview(toFront: upload)
         recordButton.isHidden = true
+        flipCamera.isHidden = true
+        recordView.isHidden = true
+        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(upload))
+        navigationItem.rightBarButtonItem = barButtonItem
     }
 
     private func buildPlayerView(playerLayer: AVPlayerLayer) -> PlayerView {
