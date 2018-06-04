@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02D5AE9C3F936AB39AA150F0 /* Pods_poppin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743DF4B06F21FDCB3D939403 /* Pods_poppin.framework */; };
+		8CFDCFC8344B470ED4147FF7 /* libPods-poppin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC6CED699045BE7D3E511CC /* libPods-poppin.a */; };
 		EA981A3B208BB316005C649F /* RecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA981A3A208BB316005C649F /* RecordVC.swift */; };
 		EA981A3D208BBC59005C649F /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA981A3C208BBC59005C649F /* LoadingVC.swift */; };
 		EA981A3F208BC51F005C649F /* PlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA981A3E208BC51F005C649F /* PlayerVC.swift */; };
@@ -22,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		6EFCF186C4332974BC007BAE /* Pods-poppin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poppin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-poppin/Pods-poppin.debug.xcconfig"; sourceTree = "<group>"; };
-		743DF4B06F21FDCB3D939403 /* Pods_poppin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_poppin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B27B12A385691051BB20818 /* Pods-poppin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-poppin.release.xcconfig"; path = "Pods/Target Support Files/Pods-poppin/Pods-poppin.release.xcconfig"; sourceTree = "<group>"; };
 		EA981A37208BB2C0005C649F /* poppin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "poppin-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA981A3A208BB316005C649F /* RecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVC.swift; sourceTree = "<group>"; };
@@ -37,6 +36,7 @@
 		EAED1C7F208BAC3900FE3CE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAED1C82208BAC3900FE3CE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAED1C84208BAC3900FE3CE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC6CED699045BE7D3E511CC /* libPods-poppin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-poppin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D5AE9C3F936AB39AA150F0 /* Pods_poppin.framework in Frameworks */,
+				8CFDCFC8344B470ED4147FF7 /* libPods-poppin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,7 +54,7 @@
 		E586AC25A2AA18A73E3AAEDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				743DF4B06F21FDCB3D939403 /* Pods_poppin.framework */,
+				ECC6CED699045BE7D3E511CC /* libPods-poppin.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,7 +116,6 @@
 				EAED1C71208BAC3700FE3CE2 /* Sources */,
 				EAED1C72208BAC3700FE3CE2 /* Frameworks */,
 				EAED1C73208BAC3700FE3CE2 /* Resources */,
-				57683E74F837D13CAC15745E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,26 +192,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		57683E74F837D13CAC15745E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-poppin/Pods-poppin-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/SCRecorder/SCRecorder.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCRecorder.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-poppin/Pods-poppin-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

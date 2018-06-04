@@ -3,20 +3,24 @@ PODS:
     - NVActivityIndicatorView/Presenter (= 4.2.0)
   - NVActivityIndicatorView/Presenter (4.2.0)
   - SCRecorder (2.7.0)
+  - TinyConstraints (3.1.0)
 
 DEPENDENCIES:
   - NVActivityIndicatorView
   - SCRecorder
+  - TinyConstraints
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - NVActivityIndicatorView
     - SCRecorder
+    - TinyConstraints
 
 SPEC CHECKSUMS:
   NVActivityIndicatorView: 75c9634073e03b31d7e2748cd2417feab1206195
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
+  TinyConstraints: 4721a4b303c799328867078ade6560e152df54d1
 
-PODFILE CHECKSUM: fa5db3f1764cb7981d8e7490d8cb903c3afa1aae
+PODFILE CHECKSUM: 340d37db990529225f7465a831481c243d3abc65
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

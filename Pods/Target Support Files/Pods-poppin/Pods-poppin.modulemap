@@ -1,4 +1,4 @@
-framework module Pods_poppin {
+module Pods_poppin {
   umbrella header "Pods-poppin-umbrella.h"
 
   export *
