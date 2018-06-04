@@ -5,6 +5,8 @@ import MapKit
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var overlay: UIView!
+    @IBOutlet weak var isItPoppin: UIImageView!
     var locationManager: CLLocationManager!
 
     let pops:[Pop] = [ Pop(title: "El Dique", imageName: "popSmall", coordinate: CLLocationCoordinate2D(latitude:  41.3793779, longitude:       2.1879071)),
@@ -17,7 +19,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.delegate = self
         for pop in pops {
             mapView?.addAnnotation(pop)
-
         }
     }
 
@@ -27,7 +28,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidAppear(animated)
         viewDidAppear += 1
         if viewDidAppear == 2 {
-            
+            overlay.isHidden = false
+            isItPoppin.isHidden = false
         }
     }
 
