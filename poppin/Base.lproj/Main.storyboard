@@ -59,7 +59,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="What's Poppin?" largeTitleDisplayMode="always" id="xvi-6L-VUm"/>
+                    <navigationItem key="navigationItem" title="What's Poppin?" largeTitleDisplayMode="always" id="xvi-6L-VUm">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="eBq-II-BPC"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="bfY-qW-FFJ" id="BTY-xi-pBK"/>
                     </connections>
@@ -104,23 +106,30 @@
             </objects>
             <point key="canvasLocation" x="2034" y="842"/>
         </scene>
-        <!--RecordVC-->
+        <!--Video-->
         <scene sceneID="VTp-TP-J9v">
             <objects>
-                <viewController id="amf-eM-kug" customClass="RecordVC" customModule="poppin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Video" id="amf-eM-kug" customClass="RecordVC" customModule="poppin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K34-Jb-gGV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9v-PC-lzh">
+                                <rect key="frame" x="0.0" y="662" width="375" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Xhx-fA-IVI"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3If-Xl-y7T">
-                                <rect key="frame" x="163" y="708" width="50" height="50"/>
-                                <state key="normal" image="playvideo"/>
+                                <rect key="frame" x="152" y="696" width="72" height="72"/>
+                                <state key="normal" image="take video"/>
                                 <connections>
                                     <action selector="recordTapped:" destination="amf-eM-kug" eventType="touchUpInside" id="lcE-gE-cmG"/>
                                 </connections>
                             </button>
                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3bG-0R-irL">
-                                <rect key="frame" x="0.0" y="688" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="698" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saa-zz-huj">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
@@ -131,20 +140,17 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftz-w2-iXP">
-                                <rect key="frame" x="8" y="88" width="50" height="50"/>
-                                <state key="normal" image="discard"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3bG-0R-irL" secondAttribute="bottom" constant="20" id="4uh-Be-shK"/>
-                            <constraint firstItem="Ftz-w2-iXP" firstAttribute="leading" secondItem="kcD-Ib-nvn" secondAttribute="leading" constant="8" id="Ijq-tp-g4W"/>
+                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3bG-0R-irL" secondAttribute="bottom" constant="10" id="4uh-Be-shK"/>
+                            <constraint firstItem="s9v-PC-lzh" firstAttribute="trailing" secondItem="kcD-Ib-nvn" secondAttribute="trailing" id="Lpp-fM-PRe"/>
+                            <constraint firstAttribute="bottom" secondItem="s9v-PC-lzh" secondAttribute="bottom" id="SOf-Di-b1Y"/>
                             <constraint firstItem="kcD-Ib-nvn" firstAttribute="trailing" secondItem="3bG-0R-irL" secondAttribute="trailing" id="Wag-8u-FWu"/>
                             <constraint firstItem="3bG-0R-irL" firstAttribute="leading" secondItem="kcD-Ib-nvn" secondAttribute="leading" id="XQg-a2-3h4"/>
-                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3If-Xl-y7T" secondAttribute="bottom" constant="20" id="dhQ-fD-EQ1"/>
+                            <constraint firstItem="s9v-PC-lzh" firstAttribute="leading" secondItem="kcD-Ib-nvn" secondAttribute="leading" id="b7v-Od-Ady"/>
+                            <constraint firstItem="kcD-Ib-nvn" firstAttribute="bottom" secondItem="3If-Xl-y7T" secondAttribute="bottom" constant="10" id="dhQ-fD-EQ1"/>
                             <constraint firstItem="3If-Xl-y7T" firstAttribute="centerX" secondItem="K34-Jb-gGV" secondAttribute="centerX" id="hMo-48-6se"/>
-                            <constraint firstItem="Ftz-w2-iXP" firstAttribute="top" secondItem="kcD-Ib-nvn" secondAttribute="top" id="sc4-85-ryK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kcD-Ib-nvn"/>
                     </view>
@@ -219,10 +225,9 @@
     <resources>
         <image name="TAKE ME THERE" width="375" height="62"/>
         <image name="addvideo" width="72" height="72"/>
-        <image name="discard" width="50" height="50"/>
         <image name="isItPoppin" width="332" height="340"/>
         <image name="location" width="72" height="72"/>
-        <image name="playvideo" width="50" height="50"/>
+        <image name="take video" width="72" height="72"/>
         <image name="upload" width="70" height="70"/>
     </resources>
 </document>

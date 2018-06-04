@@ -6,7 +6,7 @@ class RecordVC: UIViewController {
 
     @IBOutlet weak var upload: UIStackView!
     @IBOutlet weak var recordButton: UIButton!
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
         recorder = SCRecorder.shared()
         if !recorder.startRunning() {
