@@ -23,6 +23,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissPopup))
         gesture.numberOfTapsRequired = 1
         view.addGestureRecognizer(gesture)
+
+        let othergesture = UITapGestureRecognizer(target: self, action: #selector(showPopup))
+        othergesture.numberOfTapsRequired = 3
+        view.addGestureRecognizer(othergesture)
+    }
+
+    @objc func showPopup() {
+        overlay.isHidden = false
+        isItPoppin.isHidden = false
     }
 
     @objc func dismissPopup() {
